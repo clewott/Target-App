@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import MediaQuery from "react-responsive";
 import Reviews from "./Reviews";
 import Promotion from "./Promotion";
-import Quantity from "./Quantity";
+import QuantityContainer from "../containers/QuantityContainer";
 import Highlights from "./Highlights";
 import Images from "./Images";
 
@@ -11,11 +11,9 @@ class Product extends Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     var itemDetail = this.props.itemDetail;
-    console.log(itemDetail.Images[0].PrimaryImage[0].image);
     return (
-      <div className="itemDetailContainer container">
+      <div className="productDetailContainer container">
         <div className="row">
           <div className="productLeftColumn col-md-5">
             <h2 className="productTitle">{itemDetail.title}</h2>
@@ -42,10 +40,10 @@ class Product extends Component {
             </div>
             <hr></hr>
             <div className="productQuantityContainer">
-              <Quantity 
+              <QuantityContainer 
                 key={itemDetail.itemId} 
                 availability={itemDetail.purchasingChannelCode} 
-                Quantity={1}/>
+                quantity={1}/>
             </div>
             <div className="productHighlightsContainer">
               <Highlights 

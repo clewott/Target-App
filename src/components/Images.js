@@ -10,10 +10,9 @@ class Images extends Component {
     }
   }
   makeImageLarger () {
-    alert('I would make the image larger now');
+    alert("I would make the image larger now");
   }
   render() {
-    console.log(this.state.activeSlide);
     let images = this.props.images;
     let settings = {
       slidesToShow: 3,
@@ -22,7 +21,7 @@ class Images extends Component {
     }
     let largeImage = this.state.showPrimary ? this.props.primaryImage : images[this.state.activeSlide].image;
     return (
-      <div className='imageContainer'>
+      <div className="imageContainer">
         <div className="primaryImageContainer">
           <img src={largeImage} className="primaryImage"/>
         </div>

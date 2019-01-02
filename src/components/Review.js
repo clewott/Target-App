@@ -8,7 +8,6 @@ class Review extends Component {
     super(props);
   }
   render () {
-    console.log(this.props);
     var reviewDetail = this.props.reviewDetail;
     let date = Moment(reviewDetail.datePosted).format("MMMM d, YYYY");
     return (

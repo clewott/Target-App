@@ -10,9 +10,8 @@ class Reviews extends Component {
   }
   render () {
     var reviewData = this.props.reviewDetails[0];
-    console.log(reviewData);
     return (
-      <div className='reviewContainer container'>
+      <div className="reviewContainer container">
         <div className="reviewSummaryContainer row">
           <div className="overallStars col-sm-6 col-6">
             <MediaQuery query="(min-device-width: 768px)">

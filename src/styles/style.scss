@@ -53,9 +53,23 @@ a {
   font: 12px;
 }
 
+.loadingContainer {
+  margin-top: 20px;
+  text-align: center;
+  .targetLoading {
+    width: 100%;
+    color: transparent!important;
+  }
+}
+
+.appContainer {
+  margin-top: 20px;
+}
+
 .productTitle {
   text-align: center;
 }
+
 .primaryImageContainer {
   text-align: center;
   .primaryImage {

@@ -1,11 +1,10 @@
-var axios = require('axios');
+var axios = require("axios");
 
-var dataFile = '/src/data/item-data.json';
+var dataFile = "/src/data/item-data.json";
 
-function getData () {
+const getData = () => {
   return axios.get(dataFile)
-    .then(function (targetItem) {
-      console.log(targetItem.data.CatalogEntryView);
+    .then((targetItem) => {
       return targetItem.data.CatalogEntryView;
     })
 }

@@ -2,8 +2,8 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-const extractCSS = new ExtractTextPlugin('style.css');
-const extractSCSS = new ExtractTextPlugin('style-two.css');
+const extractCSS = new ExtractTextPlugin("libraries.css");
+const extractSCSS = new ExtractTextPlugin("custom.css");
 
 module.exports = {
   entry: "./src/index.js",
@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.(eot|woff|woff2|ttf|svg|png|jpg|gif)$/,
-        loader: 'url-loader?limit=30000&name=[name]-[hash].[ext]'
+        loader: "url-loader?limit=30000&name=[name]-[hash].[ext]"
       } 
     ]
   },

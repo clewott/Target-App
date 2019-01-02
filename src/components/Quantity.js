@@ -4,31 +4,19 @@ import MediaQuery from "react-responsive";
 class Quantity extends Component {
   constructor (props) {
     super(props);
-    this.state = {
-      Quantity: props.Quantity
-    };
 
     this.updateQuantity = this.updateQuantity.bind(this);
   }
   updateQuantity(e) {
     let action = e.target.value;
-    let currentQuantity = this.state.Quantity;
+    let currentQuantity = this.props.quantity;
     if (action === "add") {
-      this.setState(function () {
-        return {
-          Quantity: currentQuantity + 1
-        }
-      });
+      this.props.dispatch({type: "INCREMENT"});
     } else if (action === "subtract" && currentQuantity > 0) {
-      this.setState(function () {
-        return {
-          Quantity: currentQuantity - 1
-        }
-      });
+      this.props.dispatch({type: "DECREMENT"});
     }
   }
   render () {
-    console.log(this.props);
     const availability = this.props.availability;
     let showInStore = availability === "0" || availability === "2";
     let showOnline = availability === "0" || availability === "1";
@@ -38,7 +26,7 @@ class Quantity extends Component {
           <h4 className="quantityTitle">quantity:</h4>
           <div className="quantityActions">
             <button className="subtract" onClick={this.updateQuantity} value="subtract">-</button>
-            <h3 className="quantity">{this.state.Quantity}</h3>
+            <h3 className="quantity">{this.props.quantity}</h3>
             <button className="add" onClick={this.updateQuantity} value="add">+</button>
           </div>
         </div>

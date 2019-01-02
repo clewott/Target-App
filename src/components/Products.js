@@ -35,10 +35,11 @@ class Products extends Component {
 
   render() {
     return this.state.loading === true
-      ? <h1 className='app-header'> Loading </h1>
+      ? <div className="loadingContainer"><div className="spinner-grow text-danger targetLoading" role="status">
+          <img src="/src/images/targetLogo.jpg"/>
+        </div></div>
       : <div>
-          <h1 className='app-header'>{this.text}</h1>
-          <div className='app-container'>
+          <div className="appContainer">
             {this.state.productsData.map(function (item) {
               return <Product key={item.itemId} itemDetail={item} />
             }, this)}

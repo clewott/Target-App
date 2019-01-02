@@ -5,7 +5,6 @@ class Highlights extends Component {
     super(props);
   }
   render() {
-    console.log(this.props);
     let highlights = this.props.highlights;
     
     return (
