@@ -1,0 +1,304 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+$white: #fff;
+$light-grey: #f6f5f5;
+$light-grey2: #d3d2d2;
+$medium-grey: #999;
+$medium-grey2: #ccc;
+$dark-grey: #7a7a7a;
+$social-btn-background: #f3f3f3;
+$blue: #3f7ed2;
+$red: #cc0000;
+$red2: #d21c1c;
+$black: #020202;
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+p {
+  font-size: 9px;
+}
+
+li {
+  font-size: 12px;
+}
+
+span {
+  font-size: 14px;
+}
+
+a {
+  font: 12px;
+}
+
+.productTitle {
+  text-align: center;
+}
+.primaryImageContainer {
+  text-align: center;
+  .primaryImage {
+    padding: 40px 0;
+    max-width: 100%;
+  }
+}
+
+.imageContainer {
+  .viewLargerContainer {
+    text-align: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    .viewLargerText {
+      font-size: 14px;
+      display: inline-block;
+      color: $dark-grey;
+    }
+  }
+  .slick-slider {
+    width: 200px;
+    margin: auto;
+    .slick-slide div div {
+      border: 1.5px solid $white;
+      border-radius: 3px;
+      height: 65px;
+    }
+    .slick-current div div {
+      border: 1.5px solid $medium-grey;
+      border-radius: 3px;
+    }
+    .carouselImages {
+      width: 61px;
+      height: 61px;
+      margin: auto;
+    }
+  }
+  .slick-next:before, .slick-prev:before {
+    color: $medium-grey;
+  }
+}
+
+.reviewSummaryContainer {
+  padding-bottom: 15px;
+  .overallStars {
+    span {
+      vertical-align: sub;
+      font-weight: bold;
+    }
+  }
+  
+  .totalReviews {
+    text-align: right;
+    span {
+      vertical-align: sub;
+      font-weight: bold;
+    }
+  }
+}
+
+.reviewDetailRow {
+  background-color: $light-grey;
+  h4 {
+    padding-top: 15px;
+    margin-bottom: 0;
+  }
+}
+
+.reviewDetailContainer {
+  .screenName {
+    color: $blue;
+    font-size: 10px;
+  }
+}
+
+.productPriceContainer {
+  .productPrice {
+    font-weight: bold;
+    span {
+      text-transform: lowercase;
+    }
+  }
+}
+
+.promoContainer {
+  .promo {
+    color: $red;
+    span {
+      margin-left: 5px;
+    }
+  }
+}
+
+.productQuantityContainer {
+  margin-top: 30px;
+}
+
+.quantityContainer {
+  border: 1px solid $light-grey2;
+  border-radius: 3px;
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 30px;
+  .quantityTitle, .quantity {
+    display: inline-block;
+    margin: 0
+  }
+  .quantityTitle {
+    font-size: 14px;
+  }
+  .quantityActions {
+    display: inline-block;
+    text-align: right;
+    width: 135px;
+    .subtract, .add {
+      display: inline-block;
+      background-color: $medium-grey2;
+      color: $white;
+      border: none;
+      border-radius: 100%;
+      width: 25px;
+      height: 25px;
+    }
+    .subtract {
+      margin-right: 10px;
+    }
+    .add {
+      margin-left: 10px;
+    }
+  }
+}
+
+.whereAvailableContainer {
+  margin-bottom: 20px;
+  .inStore, .online {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    padding: 0
+  }
+  .inStore {
+    padding-right: 10px;
+  }
+  .inStoreBtn, .onlineBtn {
+    color: $white;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 239px;
+    height: 40px;
+    cursor: pointer;
+    @media (max-width: $breakpoint-md) {
+      font-size: 12px;
+    }
+  }
+  .inStoreBtn {
+    background-color: $black;
+  }
+  .onlineBtn {
+    background-color: $red2;
+  }
+  .findStoreLink {
+    display: block;
+    color: $black;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.returnContainer {
+  margin-bottom: 20px;
+  .returnTitleWrapper {
+    display: inline-block;
+    border-right: 1px solid $light-grey2;
+    padding-right: 10px;
+    .returnTitle {
+      @media (max-width: $breakpoint-md) {
+        font-size: 10px;
+      }
+    }
+  }
+  .returnLink {
+    color: $dark-grey;
+    font-weight: bold;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  .returnInfo {
+    display: inline-block;
+    vertical-align: sub;
+    margin-left: 10px;
+    p {
+      margin: 0;
+      @media (max-width: $breakpoint-md) {
+        font-size: 6px;
+      }
+    }
+  }
+  
+}
+
+.socialBtnsContainer {
+  margin-bottom: 20px;
+  div div {
+    padding: 0;
+    &:nth-child(-n+2) {
+      padding-right: 5px;
+    }
+  }
+  button {
+    border: none;
+    border-radius: 3px;
+    background-color: $social-btn-background;
+    color: $black;
+    height: 25px;
+    font-size: 12px;
+    @media (max-width: $breakpoint-md) {
+      font-size: 10px;
+    }
+  }
+  .registryBtn {
+    width: 100%;
+    max-width: 155px;
+  }
+  .listBtn {
+    width: 100%;
+    max-width: 175px;
+  }
+  .shareBtn {
+    width: 100%;
+    max-width: 149px;
+  }
+}
+
+.highlightsContainer {
+  .highlightsTitle {
+    margin-bottom: 20px;
+  }
+  .highlightsList {
+    padding-left: 16px;
+    li {
+      color: $dark-grey;
+    }
+  }
+}
